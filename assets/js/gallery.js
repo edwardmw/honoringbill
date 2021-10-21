@@ -16,7 +16,7 @@ $(document).ready(function () {
         function (data) {
                 
                 var row = $("<div>").attr("class","row");             
-            
+            console.log(data);
             //EACH for the REST API
             $.each(data.photos.photo, function(i,item){    
                 var li = $("<div>").attr("class", "col-lg-2 col-md-3 col-sm-3 col-6").attr("style","margin-bottom: 30px;");
