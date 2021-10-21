@@ -4,7 +4,7 @@
 $(document).ready(function () {
 
     //TODO fill out your flickr API key
-    var flickr_api_key =  0eb5912387bf7e1fbf6b1b3f361e52ac ;
+    var flickr_api_key =  "0eb5912387bf7e1fbf6b1b3f361e52ac" ;
 
     //TODO fill the tag you are using to tag pictures of your loved one
     var loved_one_tag = honoringbill2021 ;
