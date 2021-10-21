@@ -12,7 +12,7 @@ $(document).ready(function () {
     //URL for the REST API
     var flickrFeedUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + loved_one_tag + "&per_page=100"
 
-    $.getJSON(flickrFeedUrl + "&format=json&jsoncallback", { format: "json" },
+    $.getJSON(flickrFeedUrl + "&format=json&jsoncallback=?", { format: "json" },
         function (data) {
                 
                 var row = $("<div>").attr("class","row");             
