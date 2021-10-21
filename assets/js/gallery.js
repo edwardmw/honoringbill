@@ -7,7 +7,7 @@ $(document).ready(function () {
     var flickr_api_key =  "0eb5912387bf7e1fbf6b1b3f361e52ac" ;
 
     //TODO fill the tag you are using to tag pictures of your loved one
-    var loved_one_tag = honoringbill2021 ;
+    var loved_one_tag = "honoringbill2021" ;
 
     //URL for the REST API
     var flickrFeedUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + loved_one_tag + "&per_page=100"
