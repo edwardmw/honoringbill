@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     //URL for the REST API
     // sample call constructed from API Explorer:  https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0eb5912387bf7e1fbf6b1b3f361e52ac&tags=delhi&format=json&nojsoncallback=1
-    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + loved_one_tag + "&per_page=100";
+    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + loved_one_tag;
     
     $.getJSON(flickrFeedUrl + "&format=json&jsoncallback=1", { format: "json" },
         function (data) {
