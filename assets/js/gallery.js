@@ -48,4 +48,36 @@ $(document).ready(function () {
             });
             $("#my-photos").append(row);
       });
+
+      
+    $.getJSON(flickrFeedUrlvids + "&format=json&nojsoncallback=1", { format: "json" },
+    function (data) {
+            
+            var row = $("<div>").attr("class","row");             
+        console.log(data);
+        //EACH for the REST API
+        $.each(data.photos.photo, function(i,item){    
+            var li = $("<div>").attr("class", "col-lg-2 col-md-3 col-sm-3 col-6").attr("style","margin-bottom: 30px;");
+            
+            // CODE FOR THE REST API
+            var imgsrc = "https://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_q.jpg";
+            
+            //Direct thumb photo link without going through the photo stream
+            var imgurl = "https://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_b.jpg";
+
+            //Photo stream link - will also show other photos in the account
+            //var imgurl = "https://www.flickr.com/photos/"+ item.owner +"/"+item.id;
+
+            var a = $("<a>").attr("href", imgurl).attr("title", item.title);
+            var img = $("<img/>").attr("class","img-rounded img-responsive").attr("src", imgsrc);
+
+            img.appendTo(a);
+            a.appendTo(li);
+            li.appendTo(row);
+            
+            // stop at 101 photos (i is 0 based)
+            if (i == 100) return false;
+        });
+        $("#my-videos").append(row);
+  });
 });
