@@ -9,11 +9,16 @@ $(document).ready(function () {
     //TODO fill the tag you are using to tag pictures of your loved one
     var images_tag = "honoringbill2021" ;
 
+    //TODO fill the tag you are using to tag videos of your loved one
+    var videos_tag = "honoringbill2021vids" ;
+
     //URL for the REST API
     // sample call constructed from API Explorer:  https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0eb5912387bf7e1fbf6b1b3f361e52ac&tags=delhi&format=json&nojsoncallback=1
-    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + images_tag;
+    var flickrFeedUrlpics = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + images_tag;
     
-    $.getJSON(flickrFeedUrl + "&format=json&nojsoncallback=1", { format: "json" },
+    var flickrFeedUrlvids = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + videos_tag;
+    
+    $.getJSON(flickrFeedUrlpics + "&format=json&nojsoncallback=1", { format: "json" },
         function (data) {
                 
                 var row = $("<div>").attr("class","row");             
@@ -43,4 +48,5 @@ $(document).ready(function () {
             });
             $("#my-photos").append(row);
       });
+  });
 });
