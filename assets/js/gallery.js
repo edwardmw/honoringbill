@@ -7,7 +7,7 @@ $(document).ready(function () {
     var flickr_api_key =  "0eb5912387bf7e1fbf6b1b3f361e52ac" ;
 
     //TODO fill the tag you are using to tag pictures of your loved one honoringbill2021
-    var images_tag = "delhi" ;
+    var images_tag = "honoringbill2021" ;
 
     //URL for the REST API
     // sample call constructed from API Explorer:  https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0eb5912387bf7e1fbf6b1b3f361e52ac&tags=delhi&format=json&nojsoncallback=1
