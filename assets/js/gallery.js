@@ -39,7 +39,7 @@ $(document).ready(function () {
                 li.appendTo(row);
                 
                 // stop at 101 photos (i is 0 based)
-                if (i == 200) return false;
+                if (i == 150) return false;
             });
             $("#my-photos").append(row);
       });
