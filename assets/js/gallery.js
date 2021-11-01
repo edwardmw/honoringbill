@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     //URL for the REST API
     // sample call constructed from API Explorer:  https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0eb5912387bf7e1fbf6b1b3f361e52ac&tags=delhi&format=json&nojsoncallback=1
-    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + images_tag + "&per_page=200";
+    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + images_tag + "&per_page=300";
     
     $.getJSON(flickrFeedUrl + "&format=json&nojsoncallback=1", { format: "json" },
         function (data) {
@@ -38,8 +38,8 @@ $(document).ready(function () {
                 a.appendTo(li);
                 li.appendTo(row);
                 
-                // stop at 101 photos (i is 0 based)
-                if (i == 150) return false;
+                // stop at 301 photos (i is 0 based)
+                if (i == 300) return false;
             });
             $("#my-photos_Bill").append(row);
       });
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     //URL for the REST API
     // sample call constructed from API Explorer:  https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0eb5912387bf7e1fbf6b1b3f361e52ac&tags=delhi&format=json&nojsoncallback=1
-    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + images_tag;
+    var flickrFeedUrl = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=" + flickr_api_key + "&tags=" + images_tag + "&per_page=300";
     
     $.getJSON(flickrFeedUrl + "&format=json&nojsoncallback=1", { format: "json" },
         function (data) {
@@ -83,8 +83,8 @@ $(document).ready(function () {
                 a.appendTo(li);
                 li.appendTo(row);
                 
-                // stop at 101 photos (i is 0 based)
-                if (i == 150) return false;
+                // stop at 301 photos (i is 0 based)
+                if (i == 300) return false;
             });
             $("#my-photos_memories").append(row);
       });
